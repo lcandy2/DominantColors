@@ -8,7 +8,7 @@
 import CoreImage
 #if os(OSX)
 import AppKit.NSImage
-#elseif os(iOS)
+#elseif os(iOS) || os(visionOS)
 import UIKit.UIImage
 #endif
 
@@ -66,7 +66,7 @@ extension ImageFilter {
         return outputCGImage
     }
 }
-#elseif os(iOS)
+#elseif os(iOS) || os(visionOS)
 extension ImageFilter {
     // Representation CFData image
     private static func imageRepresentation(cgImage: CGImage) throws -> CGImage {

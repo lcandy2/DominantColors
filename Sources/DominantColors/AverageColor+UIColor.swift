@@ -5,7 +5,7 @@
 //  Created by Saffet Emin Reisoğlu on 8/29/24.
 //
 
-#if os(iOS)
+#if os(iOS) || os(visionOS)
 import UIKit
 
 @available(iOS 2.0, *)
